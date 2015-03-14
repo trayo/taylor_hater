@@ -1,0 +1,19 @@
+html {
+  background-image: url(/images/taylor.jpg)
+}
+
+.center {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 40%;
+  top: 45%;
+}
+
+.button {
+  display: inline;
+}
+
+.key-pressed {
+  padding 50px;
+}
