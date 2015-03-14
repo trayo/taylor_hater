@@ -52,13 +52,13 @@
         plays = plays === 5 ? 1 : ++plays;
       });
 
-      Mousetrap.bind("j", function(e) {
+      Mousetrap.bind("v", function(e) {
         ion.sound.stop("shakeitoff");
         ion.sound.play("shakeitoff", { part: "shake" });
         plays = 1;
       });
 
-      Mousetrap.bind("k", function(e) {
+      Mousetrap.bind("b", function(e) {
         ion.sound.stop("shakeitoff");
         ion.sound.play("shakeitoff", { part: "shakeitoff" });
         plays = 1;
@@ -69,16 +69,18 @@
       });
 
       function play(key) {
+        debugger;
         Mousetrap.trigger(key);
       }
     </script>
 
     <div class="center">
-      <button class="button" id="haters" onclick="play('f')">HATERS (F)</button>
-      <button class="button" id="gonna" onclick="play('g')">GONNA (G)</button>
-      <button class="button" id="hate" onclick="play('h')">HATE (H x 5)</button>
-      <button class="button" id="shake" onclick="play('j')">I'M JUST GONNA SHAKE (J)</button>
-      <button class="button" id="shakeitoff" onclick="play('k')">SHAKE IT OFF (K)</button>
+      <a class="button" id="f" onclick="play('f')">HATERS (F)</a>
+      <a class="button" id="g" onclick="play('g')">GONNA (G)</a>
+      <a class="button" id="h" onclick="play('h')">HATE<br>(H x 5)</a>
+      <a class="button" id="v" onclick="play('v')">I'M JUST GONNA SHAKE (V)</a>
+      <a class="button" id="b" onclick="play('b')">SHAKE IT OFF (B)</a>
+      <a class="button" id="s" onclick="play('s')">STOP SOUNDS (S)</a>
     </div>
   </body>
 </html>
