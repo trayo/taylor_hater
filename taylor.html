@@ -2,17 +2,32 @@
 <html>
   <head>
     <script type="text/javascript" src="javascripts/mousetrap.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="javascripts/ion-sound/js/ion.sound.js"></script>
     <link href="stylesheets/main.css" rel="stylesheet">
   </head>
   <body>
+    <div class="center">
+      <a class="button" id="f" onclick="play('f')">HATERS (F)</a>
+      <a class="button" id="g" onclick="play('g')">GONNA (G)</a>
+      <a class="button" id="h" onclick="play('h')">HATE<br>(H x 5)</a>
+      <a class="button" id="v" onclick="play('v')">I'M JUST GONNA SHAKE (V)</a>
+      <a class="button" id="b" onclick="play('b')">SHAKE IT OFF (B)</a>
+      <a class="button" id="n" onclick="play('n')">STOP SOUNDS (N)</a>
+    </div>
+
     <script>
+      var hater = $("#f")
+      var gonna = $("#g")
+      var hate = $("#h")
+      var shakeItOff = $("#v")
+      var shake = $("#b")
+      var stop = $("#h")
 
       ion.sound({
         sounds: [
           {
             name: "shakeitoff",
-            volume: 0.4,
             sprite: {
               "haters": [45.14, 0.36],
               "gonna": [45.55, 0.3],
@@ -64,23 +79,15 @@
         plays = 1;
       });
 
-      Mousetrap.bind("s", function(e) {
+      Mousetrap.bind("n", function(e) {
         ion.sound.stop("shakeitoff");
       });
 
       function play(key) {
-        debugger;
+
         Mousetrap.trigger(key);
       }
     </script>
 
-    <div class="center">
-      <a class="button" id="f" onclick="play('f')">HATERS (F)</a>
-      <a class="button" id="g" onclick="play('g')">GONNA (G)</a>
-      <a class="button" id="h" onclick="play('h')">HATE<br>(H x 5)</a>
-      <a class="button" id="v" onclick="play('v')">I'M JUST GONNA SHAKE (V)</a>
-      <a class="button" id="b" onclick="play('b')">SHAKE IT OFF (B)</a>
-      <a class="button" id="s" onclick="play('s')">STOP SOUNDS (S)</a>
-    </div>
   </body>
 </html>
