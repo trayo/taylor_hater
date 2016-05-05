@@ -1,5 +1,8 @@
- html {
-  background-image: url(https://raw.githubusercontent.com/trayo/taylor_hater/master/images/taylor.jpg)
+html {
+  background-image: url(https://raw.githubusercontent.com/trayo/taylor_hater/master/images/taylor.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .center {
